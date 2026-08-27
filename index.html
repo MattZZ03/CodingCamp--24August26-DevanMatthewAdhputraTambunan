@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To-Do List</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+      </head>
+
+    <body>
+      <div class="wrap">
+        <header class="greeting">
+          <div class="greeting-text">
+            <h1 id="greetingTitle">Good morning</h1>
+            <p id="greetingSub">Here's what's on deck today.</p>
+      </div>
+
+    <div class="clock">
+      <div class="time"><span class="dot"></span><span id="clockTime">00:00:00</span></div>
+      <div class="date" id="clockDate">Loading…</div>
+    </div>
+  </header>
+
+  <div class="grid">
+
+    <!-- Focus timer -->
+    <section class="card" aria-label="Focus timer">
+      <h2>Focus Timer</h2>
+      <div class="timer-face">
+        <div class="timer-display" id="timerDisplay">25:00</div>
+        <div class="timer-label" id="timerState">Ready</div>
+        <div class="timer-controls">
+          <button class="btn btn-primary" id="timerStart">Start</button>
+          <button class="btn btn-ghost" id="timerReset">Reset</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- To-do list -->
+    <section class="card" aria-label="Tasks">
+      <h2>Tasks</h2>
+      <form class="task-form" id="taskForm">
+        <input class="task-input" id="taskInput" type="text" placeholder="Add a task and press Enter" maxlength="200" autocomplete="off">
+        <button class="btn btn-primary" type="submit">Add</button>
+      </form>
+      <ul class="task-list" id="taskList"></ul>
+    </section>
+
+  </div>
+
+  <!-- Quick links -->
+  <section class="card links-card" aria-label="Quick links">
+    <h2>Quick Links</h2>
+    <div class="links-row" id="linksRow"></div>
+    <div class="link-form hidden" id="linkForm">
+      <input type="text" name="name" placeholder="Label (e.g. Gmail)" maxlength="30">
+      <input type="text" name="url" placeholder="https://example.com">
+      <button class="btn btn-primary" type="button" id="linkSave">Save</button>
+      <button class="btn btn-ghost" type="button" id="linkCancel">Cancel</button>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>
